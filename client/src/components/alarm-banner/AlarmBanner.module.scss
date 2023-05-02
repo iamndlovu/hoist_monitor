@@ -1,0 +1,24 @@
+.AlarmBanner {
+  border-bottom: 2px solid gray;
+
+  table {
+    padding: 2px 0;
+    width: 100%;
+    text-transform: uppercase;
+
+    tr {
+      &.high {
+        background-color: rgb(253, 216, 5);
+      }
+
+      &.very-high {
+        background-color: red;
+      }
+
+      td {
+        padding-left: 4px;
+        font-weight: 500;
+      }
+    }
+  }
+}

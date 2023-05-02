@@ -1,0 +1,11 @@
+.MetricDisplay {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+  border-radius: 7px;
+  grid-column: 20 / 61;
+  grid-row: 51 / -1;
+  margin-top: 1rem;
+  padding: 1rem 2.7rem;
+}

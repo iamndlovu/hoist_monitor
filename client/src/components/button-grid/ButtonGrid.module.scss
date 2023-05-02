@@ -1,0 +1,13 @@
+.ButtonGrid {
+  display: grid;
+  gap: 1rem;
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 7px;
+    min-height: 2rem;
+  }
+}

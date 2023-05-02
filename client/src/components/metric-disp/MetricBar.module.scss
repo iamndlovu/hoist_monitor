@@ -1,0 +1,72 @@
+.MetricValue {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 7px;
+  border: 2px solid gray;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.MetricBar {
+  width: 5rem;
+  height: 13rem;
+  border: 2px solid gray;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+
+  & > span {
+    width: 100%;
+  }
+
+  & > div {
+    position: absolute;
+    left: -50%;
+    width: 200%;
+
+    & > span:nth-child(1) {
+      display: inline-block;
+      transform: translate(0.4rem, 0.5rem);
+    }
+
+    & > span:nth-child(2) {
+      display: inline-block;
+      transform: translate(0.47rem, 2px);
+    }
+
+    & > span:nth-child(3) {
+      display: inline-block;
+      transform: translate(4.35rem, 2px);
+    }
+
+    & > span:nth-child(4) {
+      display: inline-block;
+      transform: translate(4.42rem, 0.5rem);
+    }
+  }
+
+  & > div:nth-child(3) {
+    & > span:nth-child(1) {
+      display: inline-block;
+      transform: translate(1.12rem, 0.5rem);
+    }
+
+    & > span:nth-child(2) {
+      display: inline-block;
+      transform: translate(1.2rem, 2px);
+    }
+
+    & > span:nth-child(3) {
+      display: inline-block;
+      transform: translate(5rem, 2px);
+    }
+
+    & > span:nth-child(4) {
+      display: inline-block;
+      transform: translate(5.2rem, 0.5rem);
+    }
+  }
+}
