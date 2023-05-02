@@ -9,5 +9,9 @@
     border: 2px solid gray;
     border-radius: 7px;
     min-height: 2rem;
+
+    &.btn_on {
+      background-color: yellow;
+    }
   }
 }
