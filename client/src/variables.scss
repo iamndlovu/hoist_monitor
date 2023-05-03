@@ -1,1 +1,25 @@
 $side-padding: 2rem;
+
+@keyframes red-blink-animation {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes yellow-blink-animation {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: white;
+  }
+}

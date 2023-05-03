@@ -1,31 +1,21 @@
 import { useState, useEffect } from 'react';
 import styles from './AlarmBanner.module.scss';
-const alarms =
-  [
-    {
-      metric: 'speed',
-      level: 90,
-      msg: 'level very high',
-      value: '10 m/s',
-    },
-    {
-      metric: 'weight',
-      level: 80,
-      msg: 'level high',
-      value: '3000 KG',
-    },
-  ] && false;
+const alarms = [
+  {
+    metric: 'speed',
+    level: 80,
+    msg: 'speed high',
+    value: '2.15 m/s',
+  },
+  {
+    metric: 'weight',
+    level: 90,
+    msg: 'load very heavy',
+    value: '901 KG',
+  },
+];
 
 const AlarmBanner = () => {
-  const [showBg, setShowBg] = useState(true);
-
-  useEffect(() => {
-    alarms &&
-      setInterval(() => {
-        setShowBg(!showBg);
-      }, 1500);
-  }, [showBg]);
-
   return (
     alarms && (
       <section className={styles.AlarmBanner}>
@@ -33,8 +23,8 @@ const AlarmBanner = () => {
           {alarms.map(({ metric, level, msg, value }) => (
             <tr
               className={
-                (showBg && level >= 80 && level < 90 && styles.high) ||
-                (showBg && level >= 90 && styles['very-high'])
+                (level >= 80 && level < 90 && styles.high) ||
+                (level >= 90 && styles['very-high'])
               }
             >
               <td>{metric}</td>

@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .AlarmBanner {
   border-bottom: 2px solid gray;
 
@@ -8,16 +10,19 @@
 
     tr {
       &.high {
-        background-color: rgb(253, 216, 5);
+        animation: yellow-blink-animation 3s infinite;
+        background-color: yellow;
       }
 
       &.very-high {
+        animation: red-blink-animation 3s infinite;
         background-color: red;
       }
 
       td {
         padding-left: 4px;
-        font-weight: 500;
+        font-weight: 600;
+        font-weight: 1.2rem;
       }
     }
   }

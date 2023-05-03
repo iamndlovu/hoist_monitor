@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.DoorStatusCard {
+  height: 19rem;
+  width: 9rem;
+  border: 2px solid gray;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.danger {
+    animation: red-blink-animation 3s infinite;
+    background-color: red;
+  }
+
+  & > article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 2rem;
+    height: 9rem;
+    width: 7rem;
+  }
+}
