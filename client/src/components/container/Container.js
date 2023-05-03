@@ -1,5 +1,5 @@
-import AlarmBanner from '../alarm-banner/AlarmBanner';
 import CageRequestBtns from '../cage-req/CageRequestBtns';
+import HoistLevelBar_Container from '../hoistlevel-bar/HoistLevelBar_Container';
 import LiveStream from '../live-stream/LiveStream';
 import LevelRequestBtns from '../lvl-req/LevelRequestBtns';
 import MetricDisplay from '../metric-disp/MetricDisplay';
@@ -12,6 +12,7 @@ const Container = () => (
       <LevelRequestBtns />
       <CageRequestBtns />
       <MetricDisplay />
+      <HoistLevelBar_Container />
     </div>
   </main>
 );

@@ -28,6 +28,8 @@ code {
 
 .top {
   position: sticky;
+  background-color: white;
+  z-index: 100;
   top: 0;
 }
 
