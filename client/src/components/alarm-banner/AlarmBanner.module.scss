@@ -1,7 +1,9 @@
 @import '../../variables.scss';
 
 .AlarmBanner {
-  border-bottom: 2px solid gray;
+  flex-shrink: 1;
+  flex-basis: 33rem;
+  height: 100%;
 
   table {
     padding: 2px 0;
@@ -9,6 +11,11 @@
     text-transform: uppercase;
 
     tr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 $side-padding;
+
       &.high {
         animation: yellow-blink-animation 3s infinite;
         background-color: yellow;

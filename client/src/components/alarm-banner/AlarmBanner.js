@@ -20,18 +20,21 @@ const AlarmBanner = () => {
     alarms && (
       <section className={styles.AlarmBanner}>
         <table>
-          {alarms.map(({ metric, level, msg, value }) => (
-            <tr
-              className={
-                (level >= 80 && level < 90 && styles.high) ||
-                (level >= 90 && styles['very-high'])
-              }
-            >
-              <td>{metric}</td>
-              <td>{msg}</td>
-              <td>{value}</td>
-            </tr>
-          ))}
+          <tbody>
+            {alarms.map(({ metric, level, msg, value }) => (
+              <tr
+                className={
+                  (level >= 80 && level < 90 && styles.high) ||
+                  (level >= 90 && styles['very-high'])
+                }
+                key={metric + msg + value}
+              >
+                <td>{metric}</td>
+                <td>{msg}</td>
+                <td>{value}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </section>
     )

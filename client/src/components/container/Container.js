@@ -7,7 +7,6 @@ import layout from './Container.module.scss';
 
 const Container = () => (
   <main className={layout.Container}>
-    <AlarmBanner />
     <div className={layout.el}>
       <LiveStream />
       <LevelRequestBtns />
