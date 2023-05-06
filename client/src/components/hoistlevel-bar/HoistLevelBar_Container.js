@@ -1,4 +1,5 @@
 import styles from './HoistLevelBar_Container.module.scss';
+import LevelIndicator from './LevelIndicator';
 
 const HoistLevelBar_Container = () => {
   let levels = [];
@@ -15,15 +16,23 @@ const HoistLevelBar_Container = () => {
             style={{
               position: 'absolute',
               top: `${lvl * 10}%`,
-              left: `-235%`,
-              display: 'flex',
-              flexWrap: 'nowrap',
+              left: `-2.67rem`,
               width: '900%',
             }}
           >
-            {lvl * 11}m ____ level {lvl}
+            {lvl * 11}m{' '}
+            <span
+              style={{
+                display: 'inline-block',
+                transform: 'translateY(-0.3rem)',
+              }}
+            >
+              ____
+            </span>{' '}
+            level {lvl}
           </div>
         ))}
+        <LevelIndicator distance={44} />
       </div>
     </section>
   );

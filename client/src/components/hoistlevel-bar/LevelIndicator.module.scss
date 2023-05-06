@@ -1,0 +1,25 @@
+.LevelIndicator {
+  position: absolute;
+  text-align: right;
+  z-index: 3;
+  right: 0;
+  width: 8rem;
+  transform: translateY(-0.225rem);
+
+  & > span:nth-child(1) {
+    display: inline-block;
+    color: white;
+    background: rgb(12, 12, 12);
+    border: 3px solid green;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+    transform: translateY(0.23rem);
+  }
+
+  & > span:nth-child(2) {
+    background-color: green;
+    display: inline-block;
+    height: 5px;
+    width: 1.6rem;
+  }
+}

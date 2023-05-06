@@ -17,12 +17,12 @@
       padding: 0 $side-padding;
 
       &.high {
-        animation: yellow-blink-animation 3s infinite;
+        animation: yellow-blink-animation 1.8s infinite;
         background-color: yellow;
       }
 
       &.very-high {
-        animation: red-blink-animation 3s infinite;
+        animation: red-blink-animation 1s infinite;
         background-color: red;
       }
 
