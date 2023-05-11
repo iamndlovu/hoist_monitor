@@ -1,17 +1,17 @@
-import MetricBar from './MetricBar';
+import MetricBar from "./MetricBar";
 
-const SpeedMetric = () => {
+const SpeedMetric = ({ speed, hh, h, min, max }) => {
   return (
     <div>
       <MetricBar
         head="SPEED"
         dimensions={{
-          value: 2.15,
-          HH: 2.6,
-          H: 2.15,
-          max: 3,
-          min: 0,
-          units: 'm/s',
+          value: speed,
+          HH: hh,
+          H: h,
+          max,
+          min,
+          units: "m/s",
         }}
       />
     </div>

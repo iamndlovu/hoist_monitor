@@ -1,43 +1,41 @@
-import { useState, useEffect } from 'react';
-import styles from './AlarmBanner.module.scss';
-const alarms = [
-  {
-    metric: 'speed',
-    level: 80,
-    msg: 'speed high',
-    value: '2.15 m/s',
-  },
-  {
-    metric: 'weight',
-    level: 90,
-    msg: 'load very heavy',
-    value: '901 KG',
-  },
-];
+import styles from "./AlarmBanner.module.scss";
 
-const AlarmBanner = () => {
+const AlarmBanner = ({ speedMetric, weightMetric }) => {
   return (
-    alarms && (
-      <section className={styles.AlarmBanner}>
-        <table>
-          <tbody>
-            {alarms.map(({ metric, level, msg, value }) => (
-              <tr
-                className={
-                  (level >= 80 && level < 90 && styles.high) ||
-                  (level >= 90 && styles['very-high'])
-                }
-                key={metric + msg + value}
-              >
-                <td>{metric}</td>
-                <td>{msg}</td>
-                <td>{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-    )
+    <section className={styles.AlarmBanner}>
+      <table>
+        <tbody>
+          {speedMetric.speed >= speedMetric.h && (
+            <tr
+              className={
+                (speedMetric.speed >= speedMetric.h &&
+                  speedMetric.speed < speedMetric.hh &&
+                  styles.high) ||
+                (speedMetric.speed >= speedMetric.hh && styles["very-high"])
+              }
+            >
+              <td>speed</td>
+              <td>warning</td>
+              <td>{speedMetric.speed}</td>
+            </tr>
+          )}
+          {weightMetric.weight >= weightMetric.h && (
+            <tr
+              className={
+                (weightMetric.weight >= weightMetric.h &&
+                  weightMetric.weight < weightMetric.hh &&
+                  styles.high) ||
+                (weightMetric.weight >= weightMetric.hh && styles["very-high"])
+              }
+            >
+              <td>weight</td>
+              <td>warning</td>
+              <td>{weightMetric.weight}</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </section>
   );
 };
 

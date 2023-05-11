@@ -1,17 +1,17 @@
-import MetricBar from './MetricBar';
+import MetricBar from "./MetricBar";
 
-const WeightMetric = () => {
+const WeightMetric = ({ weight, hh, h, min, max }) => {
   return (
     <div>
       <MetricBar
         head="WEIGHT"
         dimensions={{
-          value: 901,
-          HH: 900,
-          H: 800,
-          max: 1000,
-          min: 0,
-          units: 'kg',
+          value: weight,
+          HH: hh,
+          H: h,
+          max,
+          min,
+          units: "kg",
         }}
       />
     </div>

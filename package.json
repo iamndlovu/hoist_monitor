@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/iamndlovu/hoist_monitor#readme",
   "dependencies": {
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.0.1",
+    "sass": "^1.62.1"
   }
 }
